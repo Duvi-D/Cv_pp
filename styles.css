@@ -100,12 +100,20 @@ body{
   border-bottom: 1px solid color-mix(in oklab, var(--border) 60%, transparent);
 }
 .brand{ font-weight: 800; letter-spacing: .3px; color: var(--text); text-decoration:none; }
-.nav{ display:flex; gap:16px; align-items:center; }
+.nav{ display:flex; gap:16px; align-items:center; flex-wrap: wrap;}
 .nav a{
   color: var(--text); text-decoration:none; padding: 8px 10px; border-radius:10px;
   border:1px solid transparent;
 }
 .nav a:hover{ border-color: var(--border); }
+
+.nav {
+  display: flex;
+  flex-wrap: wrap; /* permite que los links bajen a la siguiente línea */
+  gap: 12px;
+}
+
+
 
 .site-header {
   padding: 14px 1rem; /* no usar min() aquí */
@@ -141,10 +149,11 @@ body{
   max-width: 100%;
   overflow: hidden; /* opcional para asegurar que nada se corte */
   text-align: left;
+  padding-inline: 1rem;
 }
 .hero h1 {
-  font-size: clamp(1.8rem, 1.2rem + 2.8vw, 3rem);
-  line-height: 1.15;
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
+  line-height: 1.2;
   margin: 0 0 12px;
   word-break: break-word; /* evita que palabras grandes se salgan */
 }
@@ -168,7 +177,7 @@ body{
 
 
 /* ====== Proyectos ====== */
-.projects{ grid-template-columns: repeat(12, 1fr); }
+.projects{ grid-template-columns: repeat(2, 1fr); }
 .project{ grid-column: span 6; }
 @media (max-width: 900px){ .project{ grid-column: span 12; } }
 
