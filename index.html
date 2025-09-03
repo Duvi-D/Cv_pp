@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Duvan Mendoza — Portfolio</title>
+  <meta name="description" content="Web portfolio and CV: Java backend, APIs, and machine learning." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Top bar -->
+  <header class="site-header">
+    <!--<a href="#" class="brand">Duvan Mendoza</a>-->
+    <nav class="nav">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact" class="btn btn-primary">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="home" aria-label="Introduction">
+    <div class="hero__content container">
+      <a href="#" class="brand">Duvan Mendoza</a>
+      <p class="kicker">Backend · APIs · ML</p>
+      <h1>Backend development in <span class="highlight">Java</span> and design of robust <span class="highlight">APIs</span>.</h1>
+      <p class="lead">
+        I build scalable services with Spring Boot, JWT, SQL/NoSQL, and Docker. I also explore machine learning to turn data into real decisions.
+      </p>
+      <div class="hero__actions">
+        <a href="#projects" class="btn btn-primary">View Projects</a>
+        <a href="#contact" class="btn btn-ghost">Let's Talk</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section container">
+    <h2 class="section__title">About Me</h2>
+    <p>
+      I am a backend developer focused on <strong>Java + Spring Boot</strong>, <strong>REST API</strong> design,
+      <strong>JWT authentication</strong>, and <strong>SQL/NoSQL</strong> databases. I value
+      <strong>simplicity</strong>, <strong>best practices</strong>, and writing maintainable code.
+    </p>
+    <ul class="meta">
+      <li>Location: Moscow</li>
+      <li>Languages: Spanish, English, Russian</li>
+      <li>Interests: Software architecture, applied ML, performance</li>
+    </ul>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="section container">
+    <h2 class="section__title">Skills</h2>
+    <div class="chips">
+      <span class="chip">Java</span>
+      <span class="chip">Spring Boot</span>
+      <span class="chip">REST APIs</span>
+      <span class="chip">JWT / Security</span>
+      <span class="chip">JavaScript</span>
+      <span class="chip">TypeScript</span>
+      <span class="chip">HTML/CSS</span>
+      <span class="chip">React</span>
+      <span class="chip">PostgreSQL</span>
+      <span class="chip">MongoDB</span>
+      <span class="chip">Docker</span>
+      <span class="chip">Git/GitHub</span>
+      <span class="chip">Python (ML)</span>
+      <span class="chip">Pandas</span>
+      <span class="chip">Numpy</span>
+      <span class="chip">Scikit-learn</span>
+    </div>
+  </section>
+
+  <!-- Projects with CSS-only filters -->
+  <section id="projects" class="section container">
+    <div class="section__header">
+      <h2 class="section__title">Projects</h2>
+      <p class="muted">Filter by technology:</p>
+      <div class="filters" role="group" aria-label="Project filters">
+        <input type="checkbox" id="f-java" class="filter" checked />
+        <label for="f-java">Java</label>
+
+        <input type="checkbox" id="f-api" class="filter" checked />
+        <label for="f-api">API</label>
+
+        <input type="checkbox" id="f-ml" class="filter" checked />
+        <label for="f-ml">ML</label>
+
+        <input type="checkbox" id="f-sql" class="filter" checked />
+        <label for="f-sql">SQL</label>
+      </div>
+    </div>
+
+    <div class="grid projects">
+      <!-- Project 1 -->
+      <article class="card project" data-tags="java api sql">
+        <header class="card__header">
+          <h3>Zona Fit — Client API</h3>
+          <span class="badge">Java</span>
+          <span class="badge">API</span>
+          <span class="badge">SQL</span>
+        </header>
+        <p>REST API with Spring Boot + JDBC + DAO pattern to manage clients (CRUD, pagination, filters, validation).</p>
+        <details>
+          <summary>Details</summary>
+          <ul>
+            <li>JWT authentication, standardized error handling</li>
+            <li>JUnit and Testcontainers testing</li>
+            <li>OpenAPI/Swagger documentation</li>
+          </ul>
+        </details>
+        <div class="card__actions">
+          <a href="#" class="btn btn-ghost">Repository</a>
+          <a href="#" class="btn btn-primary">Demo</a>
+        </div>
+      </article>
+
+      <!-- Project 2 -->
+      <article class="card project" data-tags="java api">
+        <header class="card__header">
+          <h3>User Management — JWT</h3>
+          <span class="badge">Java</span>
+          <span class="badge">API</span>
+        </header>
+        <p>Authentication service with roles, token refresh, and granular authorization policies.</p>
+        <details>
+          <summary>Details</summary>
+          <ul>
+            <li>Spring Security 6, custom filters</li>
+            <li>Lightweight hexagonal architecture</li>
+            <li>CI/CD with GitHub Actions</li>
+          </ul>
+        </details>
+        <div class="card__actions">
+          <a href="#" class="btn btn-ghost">Repository</a>
+        </div>
+      </article>
+
+      <!-- Project 3 -->
+      <article class="card project" data-tags="ml python">
+        <header class="card__header">
+          <h3>Real Estate Price Prediction</h3>
+          <span class="badge">ML</span>
+        </header>
+        <p>Data pipeline and RandomForest model for price estimation; includes ETL, features, and evaluation.</p>
+        <details>
+          <summary>Details</summary>
+          <ul>
+            <li>Reproducible notebook and report</li>
+            <li>Metrics: MAE/RMSE, cross-validation</li>
+            <li>Model export and inference API</li>
+          </ul>
+        </details>
+        <div class="card__actions">
+          <a href="#" class="btn btn-ghost">Repository</a>
+          <a href="#" class="btn btn-primary">Demo</a>
+        </div>
+      </article>
+
+      <!-- Project 4 -->
+      <article class="card project" data-tags="java api ml">
+        <header class="card__header">
+          <h3>Class Analysis API (audio + text)</h3>
+          <span class="badge">Java</span>
+          <span class="badge">API</span>
+          <span class="badge">ML</span>
+        </header>
+        <p>Video ingestion, audio extraction, transcription (Whisper), and acoustic analysis (Librosa) with REST endpoints.</p>
+        <details>
+          <summary>Details</summary>
+          <ul>
+            <li>Queues for async tasks</li>
+            <li>Results stored in PostgreSQL</li>
+            <li>CSV export</li>
+          </ul>
+        </details>
+        <div class="card__actions">
+          <a href="#" class="btn btn-ghost">Repository</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience" class="section container">
+    <h2 class="section__title">Experience</h2>
+    <div class="timeline">
+      <div class="timeline__item">
+        <div class="dot"></div>
+        <div class="content">
+          <h3>Backend Developer — Bybit</h3>
+          <span class="when">2023 — 2024</span>
+          <p>Designed REST APIs, integrated PostgreSQL, and deployed with Docker.</p>
+        </div>
+      </div>
+      <div class="timeline__item">
+        <div class="dot"></div>
+        <div class="content">
+          <h3>Data/ML Intern — JalaSoft</h3>
+          <span class="when">2024 — Present</span>
+          <p>ETL, feature engineering, and model evaluation for business cases.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section container">
+    <h2 class="section__title">Contact</h2>
+    <p>Interested in collaborating or have a proposal? Get in touch:</p>
+    <form class="contact" action="https://formspree.io/f/your-id" method="POST">
+      <div class="grid grid-2">
+        <label>
+          <span>Name</span>
+          <input type="text" name="name" required>
+        </label>
+        <label>
+          <span>Email</span>
+          <input type="email" name="email" required>
+        </label>
+      </div>
+      <label>
+        <span>Message</span>
+        <textarea name="message" rows="5" required></textarea>
+      </label>
+      <button class="btn btn-primary" type="submit">Send</button>
+    </form>
+    <div class="social">
+  <a href="https://github.com/Duvi-D" aria-label="GitHub" target="_blank" rel="noopener noreferrer">GitHub</a>
+  <a href="https://www.linkedin.com/in/duvan-mendoza-ortega-87bb57321" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+  <a href="mailto:d.mendoza.ortega@outlook.com" aria-label="Email" target="_blank" rel="noopener noreferrer">Email</a>
+</div>
+
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Duvan Mendoza — Made with ♥</p>
+    </div>
+  </footer>
+
+  <!-- Small script for the year; everything else is CSS-only -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

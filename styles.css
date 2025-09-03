@@ -1,0 +1,216 @@
+/* ====== Reset y variables ====== */
+:root{
+  --bg: #0b0d10;
+  --bg-elev: #11141a;
+  --text: #e6eaf2;
+  --muted: #9aa4b2;
+  --primary: #4f46e5; /* índigo */
+  --primary-2: #6c63ff;
+  --card: #121826;
+  --border: #1f2430;
+  --chip: #1a2030;
+  --ok: #10b981;
+  --radius: 16px;
+  --shadow: 0 10px 30px rgba(0,0,0,.4);
+}
+
+@media (prefers-color-scheme: light){
+  :root{
+    --bg: #ffffff;
+    --bg-elev: #f5f7fb;
+    --text: #0f172a;
+    --muted: #475569;
+    --primary: #4338ca;
+    --primary-2: #5850ec;
+    --card: #ffffff;
+    --border: #e5e7eb;
+    --chip: #f1f5f9;
+  }
+}
+
+*{ box-sizing: border-box; }
+html{ scroll-behavior: smooth; }
+body{
+  overflow-x: hidden;
+  width: 100%;
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  background: radial-gradient(1200px 800px at 10% -10%, rgba(79,70,229,.15), transparent),
+              linear-gradient(180deg, rgba(79,70,229,.06), transparent 30%),
+              var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* ====== Utilidades ====== */
+.container{ width: min(1100px, 92%); margin-inline: auto; }
+.section{ padding: 72px 0; }
+.section__header{ display:flex; align-items:center; gap:16px; flex-wrap:wrap; justify-content:space-between; }
+.section__title{
+  font-size: clamp(1.4rem, 1rem + 1.6vw, 2rem);
+  margin: 0 0 12px;
+}
+.lead{ font-size: clamp(1rem, .9rem + .6vw, 1.25rem); color: var(--muted); }
+.kicker{ letter-spacing:.12em; text-transform:uppercase; color: var(--primary-2); font-weight:800; margin:0 0 8px; }
+.highlight{ color: var(--ok); }
+.muted{ color: var(--muted); }
+.tip{ margin-top: 12px; font-size:.95rem; }
+.grid{ display:grid; gap: 20px; }
+.grid-2{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (max-width: 720px){ .grid-2{ grid-template-columns: 1fr; } }
+
+/* ====== Botones ====== */
+.btn{
+  display:inline-flex; align-items:center; justify-content:center;
+  padding: 10px 16px; border-radius: calc(var(--radius) - 4px);
+  text-decoration:none; border:1px solid var(--border);
+  background: var(--bg-elev); color: var(--text);
+  transition: transform .08s ease, background .2s ease, border-color .2s ease;
+  cursor: pointer; font-weight:600;
+}
+.btn:hover{ transform: translateY(-1px); border-color: color-mix(in oklab, var(--primary) 50%, var(--border)); }
+.btn-primary{
+  background: linear-gradient(180deg, var(--primary-2), var(--primary));
+  border-color: transparent; color: #fff;
+  box-shadow: 0 6px 18px rgba(79,70,229,.3);
+}
+.btn-ghost{ background: transparent; }
+.badge{
+  display:inline-block; font-size:.75rem; padding:.2rem .5rem; border-radius: 999px; background: var(--chip); color: var(--muted); border:1px solid var(--border);
+}
+
+/* ====== Header/Nav ====== */
+.site-header{
+  position: sticky; top: 0; z-index: 50;
+  display:flex; align-items:center; justify-content:space-between;
+  padding: 14px min(1100px, 92%); margin-inline:auto;
+  background: color-mix(in oklab, var(--bg) 80%, transparent);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid color-mix(in oklab, var(--border) 60%, transparent);
+}
+.brand{ font-weight: 800; letter-spacing: .3px; color: var(--text); text-decoration:none; }
+.nav{ display:flex; gap:16px; align-items:center; }
+.nav a{
+  color: var(--text); text-decoration:none; padding: 8px 10px; border-radius:10px;
+  border:1px solid transparent;
+}
+.nav a:hover{ border-color: var(--border); }
+
+/* ====== Hero ====== */
+.hero{
+  padding: 90px 0 40px;
+  background:
+    radial-gradient(900px 400px at 80% -10%, rgba(16,185,129,.12), transparent),
+    radial-gradient(600px 240px at -10% 30%, rgba(79,70,229,.14), transparent);
+}
+.hero__content{ text-align: left; }
+.hero h1{ font-size: clamp(1.8rem, 1.2rem + 2.8vw, 3rem); line-height:1.15; margin: 0 0 12px; }
+.hero__actions{ display:flex; gap:12px; margin-top: 16px; flex-wrap: wrap; }
+
+.hero .brand {
+  font-size: 2.5rem; /* aquí decides el tamaño */
+}
+
+/* ====== Sobre mí ====== */
+.meta{ display:flex; gap:16px; padding:0; list-style:none; flex-wrap:wrap; color:var(--muted); }
+.meta li{ background: var(--chip); padding:8px 12px; border-radius: 999px; border:1px solid var(--border); }
+
+/* ====== Habilidades ====== */
+.chips{ display:flex; gap:10px; flex-wrap: wrap; }
+.chip{
+  border:1px solid var(--border); background: var(--chip); color: var(--text);
+  padding: 8px 12px; border-radius: 999px; font-weight:600;
+}
+
+/* ====== Proyectos ====== */
+.projects{ grid-template-columns: repeat(12, 1fr); }
+.project{ grid-column: span 6; }
+@media (max-width: 900px){ .project{ grid-column: span 12; } }
+
+.card{
+  background: var(--card); border:1px solid var(--border);
+  border-radius: var(--radius); padding: 18px; box-shadow: var(--shadow);
+}
+.card__header{ display:flex; align-items:center; gap:10px; flex-wrap:wrap; justify-content:space-between; }
+.card__header h3{ margin:0; font-size: 1.1rem; }
+.card__actions{ display:flex; gap:10px; margin-top: 12px; }
+
+/* ====== Filtros CSS-only ====== */
+.filters{ display:flex; gap:10px; align-items:center; flex-wrap:wrap; }
+.filters input[type="checkbox"]{ display:none; }
+.filters label{
+  user-select:none; cursor:pointer; padding:6px 10px; border-radius:999px;
+  border:1px solid var(--border); background: var(--chip); color: var(--text); font-weight:600;
+}
+.filters input:checked + label{ outline:2px solid color-mix(in oklab, var(--primary) 60%, transparent); }
+
+/* Lógica de filtrado:
+   - Cuando un checkbox está DESmarcado, ocultamos las .project que tengan ese tag en data-tags.
+   - Lo hacemos con :has() y :not(:checked).
+*/
+:root:has(#f-java:not(:checked))  .project[data-tags*="java"]{ display:none; }
+:root:has(#f-api:not(:checked))   .project[data-tags*="api"]{ display:none; }
+:root:has(#f-ml:not(:checked))    .project[data-tags*="ml"]{ display:none; }
+:root:has(#f-sql:not(:checked))   .project[data-tags*="sql"]{ display:none; }
+
+/* ====== Timeline ====== */
+.timeline{ position:relative; padding-left: 24px; }
+.timeline::before{
+  content:""; position:absolute; left: 8px; top:0; bottom:0; width:2px; background: var(--border);
+}
+.timeline__item{ position:relative; padding: 8px 0 22px 12px; }
+.timeline__item .dot{
+  position:absolute; left:-1px; top: 10px; width: 10px; height:10px; border-radius:50%;
+  background: var(--primary);
+  box-shadow: 0 0 0 4px color-mix(in oklab, var(--primary) 25%, transparent);
+}
+.timeline .when{ color: var(--muted); display:block; margin-top: 4px; }
+
+/* ====== Contacto ====== */
+.contact label{ display:grid; gap:6px; font-weight:800; }
+.contact input, .contact textarea{
+  width:100%; padding: 10px 12px; border-radius: 12px;
+  border:1px solid var(--border); background: var(--bg-elev); color: var(--text);
+}
+.contact input:focus, .contact textarea:focus{
+  outline:2px solid color-mix(in oklab, var(--primary) 60%, transparent);
+  border-color: transparent;
+}
+/* Botón Send dentro de Contact Form */
+#contact .btn.btn-primary {
+  padding: 12px 20px;      /* más espacio interno: arriba/abajo y lados */
+  font-size: 1rem;         /* tamaño de letra */
+  line-height: 1.6;        /* altura de línea, más aire dentro del botón */
+  margin-top: 1.5rem;      /* espacio sobre el botón */
+  margin-bottom: 1.5rem;   /* espacio debajo del botón */
+  min-width: 140px;        /* opcional: ancho mínimo uniforme */
+}
+
+
+/* ====== Social ====== */
+.social {
+  display: flex;
+  gap: 1rem; /* espacio entre links */
+  justify-content: center; /* centrado horizontal */
+  margin-top: 1.5rem;
+}
+
+.social a {
+  text-decoration: none; /* quita subrayado */
+  color: #0077ff; /* color de los links */
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.social a:hover {
+  color: #0056b3; /* color al pasar el mouse */
+}
+
+
+/* ====== Footer ====== */
+.site-footer{ padding: 36px 0; border-top:1px solid var(--border); color: var(--muted); text-align:center; }
+
+/* ====== Accesibilidad y motion ====== */
+@media (prefers-reduced-motion: reduce){
+  *{ animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+}
