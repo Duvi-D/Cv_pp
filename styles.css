@@ -44,6 +44,15 @@ body{
   width: 100%;
 }
 
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin-inline: auto;
+  padding-inline: 1rem; /* espacio lateral seguro */
+  box-sizing: border-box;
+}
+
+
 /* ====== Utilidades ====== */
 .container{ width: min(1100px, 92%); margin-inline: auto; }
 .section{ padding: 72px 0; }
@@ -98,6 +107,21 @@ body{
 }
 .nav a:hover{ border-color: var(--border); }
 
+.site-header {
+  padding: 14px 1rem; /* no usar min() aquí */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: color-mix(in oklab, var(--bg) 80%, transparent);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid color-mix(in oklab, var(--border) 60%, transparent);
+}
+
+
+
 /* ====== Hero ====== */
 .hero{
   padding: 90px 0 40px;
@@ -113,6 +137,19 @@ body{
   font-size: 2.5rem; /* aquí decides el tamaño */
 }
 
+.hero__content {
+  max-width: 100%;
+  overflow: hidden; /* opcional para asegurar que nada se corte */
+  text-align: left;
+}
+.hero h1 {
+  font-size: clamp(1.8rem, 1.2rem + 2.8vw, 3rem);
+  line-height: 1.15;
+  margin: 0 0 12px;
+  word-break: break-word; /* evita que palabras grandes se salgan */
+}
+
+
 /* ====== Sobre mí ====== */
 .meta{ display:flex; gap:16px; padding:0; list-style:none; flex-wrap:wrap; color:var(--muted); }
 .meta li{ background: var(--chip); padding:8px 12px; border-radius: 999px; border:1px solid var(--border); }
@@ -123,6 +160,12 @@ body{
   border:1px solid var(--border); background: var(--chip); color: var(--text);
   padding: 8px 12px; border-radius: 999px; font-weight:600;
 }
+
+.chip, .badge, .meta li {
+  max-width: 100%;
+  overflow-wrap: break-word;
+}
+
 
 /* ====== Proyectos ====== */
 .projects{ grid-template-columns: repeat(12, 1fr); }
