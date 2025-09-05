@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Duvan Mendoza — Portfolio</title>
-  <meta name="description" content="Web portfolio and CV: Java backend, APIs, and machine learning." />
+  <title>Duvan Mendoza — Data Analyst Portfolio</title>
+  <meta name="description" content="Data Analyst portfolio: Python, SQL, Power BI, Excel, and Machine Learning. Dashboards, ETL, and analytics projects." />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
@@ -12,12 +12,13 @@
 <body>
   <!-- Top bar -->
   <header class="site-header">
-    <!--<a href="#" class="brand">Duvan Mendoza</a>-->
-    <nav class="nav">
+    <a href="#home" class="brand">Duvan Mendoza</a>
+    <nav class="nav" aria-label="Primary">
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
       <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
       <a href="#contact" class="btn btn-primary">Contact</a>
     </nav>
   </header>
@@ -25,11 +26,10 @@
   <!-- Hero -->
   <section class="hero" id="home" aria-label="Introduction">
     <div class="hero__content container">
-      <a href="#" class="brand">Duvan Mendoza</a>
-      <p class="kicker">Backend · APIs · ML</p>
-      <h1>Backend development in <span class="highlight">Java</span> and design of robust <span class="highlight">APIs</span>.</h1>
+      <p class="kicker">Data Analysis · BI · ML</p>
+      <h1>Turning data into decisions with <span class="highlight">Python</span>, <span class="highlight">SQL</span> and <span class="highlight">Power BI</span>.</h1>
       <p class="lead">
-        I build scalable services with Spring Boot, JWT, SQL/NoSQL and Docker. I also explore machine learning to turn data into real decisions.
+        Data Analyst focused on ETL, reporting, dashboarding, and applied ML. Comfortable with Python (pandas, NumPy, scikit-learn), SQL (MySQL, Oracle, PostgreSQL), and BI (Power BI, Excel). AWS Cloud Practitioner certified.
       </p>
       <div class="hero__actions">
         <a href="#projects" class="btn btn-primary">View Projects</a>
@@ -42,14 +42,12 @@
   <section id="about" class="section container">
     <h2 class="section__title">About Me</h2>
     <p>
-      I am a backend developer focused on <strong>Java + Spring Boot</strong>, <strong>REST API</strong> design,
-      <strong>JWT authentication</strong>, and <strong>SQL/NoSQL</strong> databases. I value
-      <strong>simplicity</strong>, <strong>best practices</strong>, and writing maintainable code.
+      I’m a Data Analyst with experience supporting operations through data-driven insights, building dashboards, and automating reports. I enjoy clean data pipelines, pragmatic visualizations, and models that serve real business needs.
     </p>
     <ul class="meta">
-      <li>Location: Moscow</li>
-      <li>Languages: Spanish, English, Russian</li>
-      <li>Interests: Software architecture, applied ML, performance</li>
+      <li>Location: Moscow, Russia</li>
+      <li>Languages: Spanish (Native), English (B2), Russian (B1)</li>
+      <li>Interests: Analytics engineering, time series, ML for operations</li>
     </ul>
   </section>
 
@@ -57,22 +55,31 @@
   <section id="skills" class="section container">
     <h2 class="section__title">Skills</h2>
     <div class="chips">
-      <span class="chip">Java</span>
-      <span class="chip">Spring Boot</span>
-      <span class="chip">REST APIs</span>
-      <span class="chip">JWT / Security</span>
-      <span class="chip">JavaScript</span>
-      <span class="chip">TypeScript</span>
-      <span class="chip">HTML/CSS</span>
-      <span class="chip">React</span>
+      <!-- Programming & Analysis -->
+      <span class="chip">Python</span>
+      <span class="chip">pandas</span>
+      <span class="chip">NumPy</span>
+      <span class="chip">matplotlib</span>
+      <span class="chip">scikit-learn</span>
+      <!-- Databases -->
+      <span class="chip">SQL</span>
+      <span class="chip">MySQL</span>
+      <span class="chip">Oracle</span>
       <span class="chip">PostgreSQL</span>
-      <span class="chip">MongoDB</span>
-      <span class="chip">Docker</span>
+      <!-- BI & Cloud -->
+      <span class="chip">Power BI</span>
+      <span class="chip">Excel</span>
+      <span class="chip">AWS (Cloud Practitioner)</span>
+      <!-- Tools & DE -->
       <span class="chip">Git/GitHub</span>
-      <span class="chip">Python (ML)</span>
-      <span class="chip">Pandas</span>
-      <span class="chip">Numpy</span>
-      <span class="chip">Scikit-learn</span>
+      <span class="chip">Jupyter</span>
+      <span class="chip">Google Colab</span>
+      <span class="chip">Linux/Bash</span>
+      <!-- ML Topics -->
+      <span class="chip">Classification</span>
+      <span class="chip">Clustering</span>
+      <span class="chip">Time Series</span>
+      <span class="chip">NLP (basics)</span>
     </div>
   </section>
 
@@ -80,60 +87,82 @@
   <section id="projects" class="section container">
     <div class="section__header">
       <h2 class="section__title">Projects</h2>
-      <p class="muted">Filter by technology:</p>
+      <p class="muted">Filter by focus:</p>
       <div class="filters" role="group" aria-label="Project filters">
-        <input type="checkbox" id="f-java" class="filter" checked />
-        <label for="f-java">Java</label>
-
-        <input type="checkbox" id="f-api" class="filter" checked />
-        <label for="f-api">API</label>
-
-        <input type="checkbox" id="f-ml" class="filter" checked />
-        <label for="f-ml">ML</label>
+        <input type="checkbox" id="f-python" class="filter" checked />
+        <label for="f-python">Python</label>
 
         <input type="checkbox" id="f-sql" class="filter" checked />
         <label for="f-sql">SQL</label>
+
+        <input type="checkbox" id="f-bi" class="filter" checked />
+        <label for="f-bi">Power BI</label>
+
+        <input type="checkbox" id="f-ml" class="filter" checked />
+        <label for="f-ml">ML</label>
       </div>
     </div>
 
     <div class="grid projects">
-      <!-- Project 1 -->
-      <article class="card project" data-tags="java api sql">
+      <!-- Project 1: Maintenance Analytics -->
+      <article class="card project" data-tags="python sql bi">
         <header class="card__header">
-          <h3>Zona Fit — Client API</h3>
-          <span class="badge">Java</span>
-          <span class="badge">API</span>
+          <h3>Maintenance Analytics — Packaging Line</h3>
+          <span class="badge">Python</span>
           <span class="badge">SQL</span>
+          <span class="badge">Power BI</span>
         </header>
-        <p>REST API with Spring Boot + JDBC + DAO pattern to manage clients (CRUD, pagination, filters, validation).</p>
+        <p>Exploratory analysis of maintenance logs to identify downtime drivers and optimize preventive schedules. Dashboards for KPIs and failure patterns.</p>
         <details>
           <summary>Details</summary>
           <ul>
-            <li>JWT authentication, standardized error handling</li>
-            <li>JUnit and Testcontainers testing</li>
-            <li>OpenAPI/Swagger documentation</li>
+            <li>ETL: cleaned logs, standardized equipment codes</li>
+            <li>KPIs: MTBF/MTTR, unplanned vs. planned downtime</li>
+            <li>Interactive dashboards in Power BI</li>
           </ul>
         </details>
         <div class="card__actions">
           <a href="#" class="btn btn-ghost">Repository</a>
-          <a href="#" class="btn btn-primary">Demo</a>
+          <a href="#" class="btn btn-primary">BI Demo</a>
         </div>
       </article>
 
-      <!-- Project 2 -->
-      <article class="card project" data-tags="java api">
+      <!-- Project 2: Production Efficiency -->
+      <article class="card project" data-tags="python bi">
         <header class="card__header">
-          <h3>User Management — JWT</h3>
-          <span class="badge">Java</span>
-          <span class="badge">API</span>
+          <h3>Production Efficiency Dashboard</h3>
+          <span class="badge">Power BI</span>
+          <span class="badge">Python</span>
         </header>
-        <p>Authentication service with roles, token refresh, and granular authorization policies.</p>
+        <p>Dashboard tracking throughput, bottlenecks, and operator task allocation with drill-downs by line and shift.</p>
         <details>
           <summary>Details</summary>
           <ul>
-            <li>Spring Security 6, custom filters</li>
-            <li>Lightweight hexagonal architecture</li>
-            <li>CI/CD with GitHub Actions</li>
+            <li>Data modeling for DAX measures</li>
+            <li>Trend and variance visuals for daily ops</li>
+            <li>Exportable PDF reports</li>
+          </ul>
+        </details>
+        <div class="card__actions">
+          <a href="#" class="btn btn-ghost">Repository</a>
+          <a href="#" class="btn btn-primary">Live Demo</a>
+        </div>
+      </article>
+
+      <!-- Project 3: Shipment Performance -->
+      <article class="card project" data-tags="sql bi python">
+        <header class="card__header">
+          <h3>Shipment Performance & Buyout Rate</h3>
+          <span class="badge">SQL</span>
+          <span class="badge">Power BI</span>
+        </header>
+        <p>Logistics analytics to monitor delivery efficiency and buyout ratio across regions; early delay detection and routing suggestions.</p>
+        <details>
+          <summary>Details</summary>
+          <ul>
+            <li>SQL aggregation by region/courier</li>
+            <li>Power BI dashboards with alerts</li>
+            <li>Weekly email report automation</li>
           </ul>
         </details>
         <div class="card__actions">
@@ -141,71 +170,100 @@
         </div>
       </article>
 
-      <!-- Project 3 -->
-      <article class="card project" data-tags="ml python">
+      <!-- Project 4: Forecasting -->
+      <article class="card project" data-tags="python ml">
         <header class="card__header">
-          <h3>Real Estate Price Prediction</h3>
+          <h3>Time Series Forecasting</h3>
+          <span class="badge">Python</span>
           <span class="badge">ML</span>
         </header>
-        <p>Data pipeline and RandomForest model for price estimation; includes ETL, features, and evaluation.</p>
+        <p>Forecast of demand/production using classical ML (RF/XGBoost) and baseline time-series methods with cross-validation.</p>
         <details>
           <summary>Details</summary>
           <ul>
-            <li>Reproducible notebook and report</li>
-            <li>Metrics: MAE/RMSE, cross-validation</li>
-            <li>Model export and inference API</li>
+            <li>Feature engineering (lags, rolling stats)</li>
+            <li>MAE/MAPE evaluation and backtesting</li>
+            <li>Model export for inference API</li>
           </ul>
         </details>
         <div class="card__actions">
           <a href="#" class="btn btn-ghost">Repository</a>
-          <a href="#" class="btn btn-primary">Demo</a>
-        </div>
-      </article>
-
-      <!-- Project 4 -->
-      <article class="card project" data-tags="java api ml">
-        <header class="card__header">
-          <h3>Class Analysis API (audio + text)</h3>
-          <span class="badge">Java</span>
-          <span class="badge">API</span>
-          <span class="badge">ML</span>
-        </header>
-        <p>Video ingestion, audio extraction, transcription (Whisper), and acoustic analysis (Librosa) with REST endpoints.</p>
-        <details>
-          <summary>Details</summary>
-          <ul>
-            <li>Queues for async tasks</li>
-            <li>Results stored in PostgreSQL</li>
-            <li>CSV export</li>
-          </ul>
-        </details>
-        <div class="card__actions">
-          <a href="#" class="btn btn-ghost">Repository</a>
+          <a href="#" class="btn btn-primary">Notebook</a>
         </div>
       </article>
     </div>
+
+    <p class="muted tip">
+      Tip: toggle the filters above to show/hide projects by focus — no JavaScript needed 😉
+    </p>
   </section>
 
   <!-- Experience -->
   <section id="experience" class="section container">
     <h2 class="section__title">Experience</h2>
+
     <div class="timeline">
       <div class="timeline__item">
         <div class="dot"></div>
         <div class="content">
-          <h3>Backend Developer — Bybit</h3>
-          <span class="when">2023 — 2024</span>
-          <p>Designed REST APIs, integrated PostgreSQL and deployed with Docker.</p>
+          <h3>Data Analyst — Cervecería Boliviana Nacional</h3>
+          <span class="when">Jan 2023 — Dec 2023</span>
+          <p>Supported data-driven maintenance planning and production efficiency on packaging lines. Built SQL/Excel/Power BI reports and dashboards.</p>
+          <ul class="muted">
+            <li>Preventive maintenance optimization using failure patterns</li>
+            <li>Bottleneck analysis and operator task reallocation</li>
+            <li>Digitized maintenance logs and KPI tracking</li>
+          </ul>
         </div>
       </div>
+
       <div class="timeline__item">
         <div class="dot"></div>
         <div class="content">
-          <h3>Data/ML Intern — Instinctools</h3>
+          <h3>Manager Logistics (Data Reporting Focus) — 47 Tech</h3>
           <span class="when">2024 — Present</span>
-          <p>ETL, feature engineering, and model evaluation for business cases.</p>
+          <p>Monitored delivery efficiency, order status, and customer reception via internal dashboards; supported procurement and customs documentation.</p>
+          <ul class="muted">
+            <li>Maintained ~60% buyout ratio through process coordination</li>
+            <li>Identified delays and proposed routing/inventory adjustments</li>
+            <li>Launched new shipment lines from Peru and Colombia</li>
+          </ul>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section id="education" class="section container">
+    <h2 class="section__title">Education</h2>
+
+    <div class="card">
+      <h3>B.Sc. Electrical Engineering — UAGRM (Bolivia)</h3>
+      <p class="muted">2019 — 2023 · GPA 90/100</p>
+      <p>Relevant coursework: Python, PLC Programming, Control Systems, Thermodynamics, Circuits, Automation & Instrumentation.</p>
+    </div>
+
+    <div class="card" style="margin-top:12px">
+      <h3>M.Sc. Software Engineering & Big Data — National Research Nuclear University MEPhI (Russia)</h3>
+      <p class="muted">Expected Jul 2026 · GPA 4.63/5</p>
+      <p>Info systems design (SQL/NoSQL), Backend & APIs, ML & Data Science, Data Visualization, Software Lifecycle.</p>
+    </div>
+
+    <div class="card" style="margin-top:12px">
+      <h3>Certificate — Applied Data Analysis — MEPhI</h3>
+      <p class="muted">Expected Aug 2025</p>
+      <p>Data analysis in Python, ML & DS, Neural Networks, App Safety.</p>
+    </div>
+
+    <div class="card" style="margin-top:12px">
+      <h3>Certificate Program — Data Scientist / ML Engineer — DIVIC CORP. (Remote, Japan)</h3>
+      <p class="muted">2025</p>
+      <p>Python for DA; ML (regression, trees, SVM, clustering); Deep Learning (CNN, RNN, LSTM); Time Series & NLP; Git/GitHub, Jupyter, Linux.</p>
+    </div>
+
+    <div class="card" style="margin-top:12px">
+      <h3>Certification</h3>
+      <p>AWS Cloud Practitioner</p>
     </div>
   </section>
 
@@ -213,6 +271,13 @@
   <section id="contact" class="section container">
     <h2 class="section__title">Contact</h2>
     <p>Interested in collaborating or have a proposal? Get in touch:</p>
+
+    <ul class="meta" style="margin-bottom:12px">
+      <li><a href="tel:+79362756262">+7 936 275 62 62</a></li>
+      <li><a href="mailto:d.mendoza.ortega@outlook.com">d.mendoza.ortega@outlook.com</a></li>
+      <li>Moscow, Russia</li>
+    </ul>
+
     <form class="contact" action="https://formspree.io/f/your-id" method="POST">
       <div class="grid grid-2">
         <label>
@@ -230,12 +295,12 @@
       </label>
       <button class="btn btn-primary" type="submit">Send</button>
     </form>
-    <div class="social">
-  <a href="https://github.com/Duvi-D" aria-label="GitHub" target="_blank" rel="noopener noreferrer">GitHub</a>
-  <a href="https://www.linkedin.com/in/duvan-mendoza-ortega-87bb57321" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-  <a href="mailto:d.mendoza.ortega@outlook.com" aria-label="Email" target="_blank" rel="noopener noreferrer">Email</a>
-</div>
 
+    <div class="social">
+      <a href="https://github.com/Duvi-D" aria-label="GitHub" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://www.linkedin.com/in/duvan-mendoza-ortega-87bb57321" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="mailto:d.mendoza.ortega@outlook.com" aria-label="Email" target="_blank" rel="noopener noreferrer">Email</a>
+    </div>
   </section>
 
   <footer class="site-footer">
@@ -244,7 +309,7 @@
     </div>
   </footer>
 
-  <!-- Small script for the year; everything else is CSS-only -->
+  <!-- Small script for the year; the rest is CSS-only -->
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
