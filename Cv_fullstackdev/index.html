@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Duvan Mendoza — Fullstack Developer</title>
+  <meta name="description" content="Portfolio and CV: Fullstack Developer skilled in JavaScript, React, Node.js, SQL, DevOps, and Java Spring Boot." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Top bar -->
+  <header class="site-header">
+    <a href="#home" class="brand">Duvan Mendoza</a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact" class="btn btn-primary">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="home" aria-label="Introduction">
+    <div class="hero__content container">
+      <p class="kicker">Fullstack · React · Node.js · Spring Boot</p>
+      <h1>Building scalable <span class="highlight">Fullstack Applications</span> with modern web technologies.</h1>
+      <p class="lead">
+        Fullstack Developer skilled in JavaScript, TypeScript, React, Node.js, Express, SQL, and DevOps practices (CI/CD, Docker).
+        Additional experience with Java, Spring Boot, microservices, and testing.
+      </p>
+      <div class="hero__actions">
+        <a href="#projects" class="btn btn-primary">View Projects</a>
+        <a href="#contact" class="btn btn-ghost">Let's Talk</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section container">
+    <h2 class="section__title">About Me</h2>
+    <p>
+      I am a Fullstack Developer with a passion for building reliable and maintainable applications. 
+      I enjoy creating responsive frontends with <strong>React</strong> and robust backends with <strong>Node.js</strong> or <strong>Spring Boot</strong>. 
+      My focus is on clean code, best practices, and deploying scalable solutions with Docker and CI/CD.
+    </p>
+    <ul class="meta">
+      <li>Location: Moscow, Russia</li>
+      <li>Languages: Spanish, English, Russian</li>
+      <li>Interests: Web applications, software architecture, cloud & DevOps</li>
+    </ul>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="section container">
+    <h2 class="section__title">Skills</h2>
+    <div class="chips">
+      <!-- Frontend -->
+      <span class="chip">HTML</span>
+      <span class="chip">CSS</span>
+      <span class="chip">JavaScript</span>
+      <span class="chip">TypeScript</span>
+      <span class="chip">React</span>
+      
+      <!-- Backend (Node.js) -->
+      <span class="chip">Node.js</span>
+      <span class="chip">Express</span>
+      <span class="chip">SQL</span>
+      <span class="chip">REST APIs</span>
+      
+      <!-- Backend (Java) -->
+      <span class="chip">Java</span>
+      <span class="chip">Spring Boot</span>
+      <span class="chip">Microservices</span>
+      <span class="chip">Testing</span>
+      
+      <!-- DevOps & Tools -->
+      <span class="chip">CI/CD</span>
+      <span class="chip">Docker</span>
+      <span class="chip">Git</span>
+      <span class="chip">GitHub</span>
+      <span class="chip">GitLab</span>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="section container">
+    <div class="section__header">
+      <h2 class="section__title">Projects</h2>
+      <p class="muted">Filter by area:</p>
+      <div class="filters" role="group" aria-label="Project filters">
+        <input type="checkbox" id="f-frontend" class="filter" checked />
+        <label for="f-frontend">Frontend</label>
+
+        <input type="checkbox" id="f-backend" class="filter" checked />
+        <label for="f-backend">Backend</label>
+
+        <input type="checkbox" id="f-fullstack" class="filter" checked />
+        <label for="f-fullstack">Fullstack</label>
+
+        <input type="checkbox" id="f-devops" class="filter" checked />
+        <label for="f-devops">DevOps</label>
+      </div>
+    </div>
+
+    <div class="grid projects">
+      <!-- Fullstack App -->
+      <article class="card project" data-tags="fullstack frontend backend">
+        <header class="card__header">
+          <h3>Task Manager — MERN App</h3>
+          <span class="badge">Fullstack</span>
+          <span class="badge">React</span>
+          <span class="badge">Node.js</span>
+        </header>
+        <p>Fullstack application for task management with authentication, CRUD operations, and role-based access.</p>
+        <details>
+          <summary>Details</summary>
+          <ul>
+            <li>Frontend: React + TypeScript</li>
+            <li>Backend: Node.js, Express, SQL</li>
+            <li>Authentication with JWT</li>
+          </ul>
+        </details>
+        <div class="card__actions">
+          <a href="#" class="btn btn-ghost">Repository</a>
+          <a href="#" class="btn btn-primary">Demo</a>
+        </div>
+      </article>
+
+      <!-- Backend API -->
+      <article class="card project" data-tags="backend">
+        <header class="card__header">
+          <h3>User Management API</h3>
+          <span class="badge">Backend</span>
+          <span class="badge">Express</span>
+        </header>
+        <p>REST API for user management with authentication, authorization, and JWT token refresh.</p>
+        <details>
+          <summary>Details</summary>
+          <ul>
+            <li>Node.js + Express backend</li>
+            <li>Role-based authorization</li>
+            <li>Testing with Jest</li>
+          </ul>
+        </details>
+        <div class="card__actions">
+          <a href="#" class="btn btn-ghost">Repository</a>
+        </div>
+      </article>
+
+      <!-- Java Microservice -->
+      <article class="card project" data-tags="backend">
+        <header class="card__header">
+          <h3>Inventory Microservice — Java Spring Boot</h3>
+          <span class="badge">Backend</span>
+          <span class="badge">Spring Boot</span>
+        </header>
+        <p>Microservice for inventory management with Spring Boot and PostgreSQL, supporting REST endpoints and Docker deployment.</p>
+        <details>
+          <summary>Details</summary>
+          <ul>
+            <li>Spring Boot + JPA + PostgreSQL</li>
+            <li>REST API with CRUD endpoints</li>
+            <li>Dockerized for deployment</li>
+          </ul>
+        </details>
+        <div class="card__actions">
+          <a href="#" class="btn btn-ghost">Repository</a>
+        </div>
+      </article>
+
+      <!-- DevOps Project -->
+      <article class="card project" data-tags="devops fullstack">
+        <header class="card__header">
+          <h3>CI/CD Pipeline with Docker</h3>
+          <span class="badge">DevOps</span>
+          <span class="badge">Docker</span>
+        </header>
+        <p>Configured a CI/CD pipeline for a fullstack app with automated builds, testing, and Docker deployment.</p>
+        <details>
+          <summary>Details</summary>
+          <ul>
+            <li>GitHub Actions CI/CD</li>
+            <li>Automated Docker builds</li>
+            <li>Deployment to cloud environment</li>
+          </ul>
+        </details>
+        <div class="card__actions">
+          <a href="#" class="btn btn-ghost">Repository</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience" class="section container">
+    <h2 class="section__title">Experience</h2>
+    <div class="timeline">
+      <div class="timeline__item">
+        <div class="dot"></div>
+        <div class="content">
+          <h3>Fullstack Developer — Freelance</h3>
+          <span class="when">2024 — Present</span>
+          <p>Developing fullstack applications using React, Node.js, and SQL. Focused on building responsive interfaces and scalable APIs.</p>
+        </div>
+      </div>
+      <div class="timeline__item">
+        <div class="dot"></div>
+        <div class="content">
+          <h3>Backend Developer (Java) — Project Work</h3>
+          <span class="when">2023 — 2024</span>
+          <p>Worked on Java Spring Boot projects, developing APIs, testing, and implementing microservice architectures.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section container">
+    <h2 class="section__title">Contact</h2>
+    <p>Interested in collaborating or have a proposal? Get in touch:</p>
+    <form class="contact" action="https://formspree.io/f/your-id" method="POST">
+      <div class="grid grid-2">
+        <label>
+          <span>Name</span>
+          <input type="text" name="name" required>
+        </label>
+        <label>
+          <span>Email</span>
+          <input type="email" name="email" required>
+        </label>
+      </div>
+      <label>
+        <span>Message</span>
+        <textarea name="message" rows="5" required></textarea>
+      </label>
+      <button class="btn btn-primary" type="submit">Send</button>
+    </form>
+    <div class="social">
+      <a href="https://github.com/Duvi-D" aria-label="GitHub" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://www.linkedin.com/in/duvan-mendoza-ortega-87bb57321" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="mailto:d.mendoza.ortega@outlook.com" aria-label="Email" target="_blank" rel="noopener noreferrer">Email</a>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Duvan Mendoza — Made with ♥</p>
+    </div>
+  </footer>
+
+  <!-- Small script for the year -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
